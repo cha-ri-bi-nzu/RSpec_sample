@@ -28,5 +28,17 @@ class PicturesController < ApplicationController
   end
 
   private
-  
+  def picture_params
+    params.require(:picture).permit(:image, :image_cache, :content)
+  end
+
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
+
+  def are_you_current_user?
+    unless @picture.user_id == current_user.id
+      redirect_to pictures_path
+    end
+  end
 end
