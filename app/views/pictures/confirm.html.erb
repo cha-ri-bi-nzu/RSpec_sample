@@ -5,5 +5,10 @@
   <p>一言:<%= @picture.content %></p>
   <%= f.hidden_field :content %>
   <%= f.submit "完っ璧！" %>
+<% end %>
+
+<%= form_with(model:@picture, url:new_picture_path, local:true, method:"get") do |f| %>
+  <%= f.hidden_field :image_cache %>
+  <%= f.hidden_field :content %>
   <%= f.submit "やっぱ書き直す", name: "back" %>
 <% end %>
