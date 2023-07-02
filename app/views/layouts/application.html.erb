@@ -15,7 +15,7 @@
       <header>
         <h1><%= link_to "Hand-magazine", pictures_path %></h1>
       </header>
-      <div>
+      <div id="link_all">
         <% if logged_in? %>
           <%= link_to "Profile", user_path(current_user.id) %>
           <%= link_to "Logout", session_path(current_user.id), method: :delete %>

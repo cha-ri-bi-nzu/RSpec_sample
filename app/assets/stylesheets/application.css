@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body {
+body {
   margin: 0px auto;
   max-width: 750px;
 }
@@ -39,6 +39,10 @@ header a {
   line-height: 70px;
   color: #fff;
   text-decoration: none;
+}
+
+#link_all{
+  margin-right: 15px;
 }
 
 footer {
