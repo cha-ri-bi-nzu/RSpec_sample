@@ -15,7 +15,7 @@
       <header>
         <h1><%= link_to "Hand-magazine", pictures_path %></h1>
       </header>
-      <table>
+      <table class="all_link">
         <tr>
           <% if logged_in? %>
             <td><%= link_to "Profile", user_path(current_user.id) %> | </td>
