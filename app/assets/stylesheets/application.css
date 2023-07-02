@@ -41,8 +41,10 @@ header a {
   text-decoration: none;
 }
 
-#link_all{
+table{
+  margin-left: 75%;
   margin-right: 15px;
+  text-align: right;
 }
 
 footer {

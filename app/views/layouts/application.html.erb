@@ -15,15 +15,17 @@
       <header>
         <h1><%= link_to "Hand-magazine", pictures_path %></h1>
       </header>
-      <div id="link_all">
-        <% if logged_in? %>
-          <%= link_to "Profile", user_path(current_user.id) %>
-          <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-        <% else %>
-          <%= link_to "Sign up", new_user_path %>
-          <%= link_to "Login", new_session_path %>
-        <% end %>
-      </div>
+      <table>
+        <tr>
+          <% if logged_in? %>
+            <td><%= link_to "Profile", user_path(current_user.id) %> | </td>
+            <td><%= link_to "Logout", session_path(current_user.id), method: :delete %></td>
+          <% else %>
+            <td><%= link_to "Sign up", new_user_path %> | </td>
+            <td><%= link_to "Login", new_session_path %></td>
+          <% end %>
+        </tr>
+      </table>
       <br>
       <div>
         <% flash.each do |key, value| %>
