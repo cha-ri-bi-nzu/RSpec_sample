@@ -27,6 +27,11 @@ class PicturesController < ApplicationController
   end
 
   def edit
+    if @picture.update(picture_params)
+      redirect_to pictures_path, notice: "編集オッケー🙆"
+    else
+      render :edit
+    end
   end
 
   def update
