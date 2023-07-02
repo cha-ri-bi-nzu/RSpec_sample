@@ -38,6 +38,8 @@ class PicturesController < ApplicationController
   end
 
   def destroy
+    @picture.destroy
+    redirect_to pictures_path, notice:"消せた(´ω｀)b"
   end
 
   private
